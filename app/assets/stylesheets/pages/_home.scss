@@ -1,1 +1,76 @@
 // Specific CSS for your home-page
+.banner {
+  height: 1400px;
+  background: linear-gradient(hsla(300%, 80%, 20%, 0.0),60%, rgb(40,48,96)),
+              url(bannerpic.png) no-repeat center center / cover;
+  display: grid;
+  place-items: center;
+}
+.center-grid {
+  display: grid;
+  place-items: center;
+}
+.line {
+  border-bottom: 5px solid #FEF054;
+  display: block;
+  width: 425px;
+}
+.main-title {
+  font-size: 80px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.titles-white{
+  font-size: 40px;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding-top: 20px;
+}
+.cards-white{
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding-top: 20px;
+  padding: 30px;
+}
+
+.yellow-button {
+  background-color: #FEF054;
+  border: none;
+  color: rgb(23, 16, 16);
+  padding: 16px 72px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+.icon-home {
+  width: 80px;
+  padding-bottom: 10px;
+}
+.banner-text {
+  place-content: center;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+// .category-card {
+
+// }
+
+// .card-image {
+
+// }
+
+.card-topics {
+  background-color: #2F8F9D;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding:10px;
+}
