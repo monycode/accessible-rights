@@ -1,4 +1,4 @@
 class Forum < ApplicationRecord
-  has_many :messages
+  has_many :questions
   validates :name, presence: true
 end
