@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :answers, only: %i[create]
   end
 
+  resources :forums, only: :show do
+    resources :questions, only: :create
+  end
+
   get 'termination', to: 'rights#termination'
   get 'resignation', to: 'rights#resignation'
   get 'unpaid_bonus', to: 'rights#unpaid_bonus'
