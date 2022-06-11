@@ -6,13 +6,10 @@ Rails.application.routes.draw do
   resources :questions, only: %i[create] do
     resources :answers, only: %i[create]
   end
-
-  #Juan comment: Not sure if it shoulf be this way, because we
-  # don't have a 'rights' model (because it's static info):
-
-  # resources :rights, only: %i[show]
-
-  #So for the moment I'm going to do it this way:
+  
+   resources :forums, only: :show do
+    resources :questions, only: :create
+  end
 
   get 'termination', to: 'rights#termination'
   get 'resignation', to: 'rights#resignation'
