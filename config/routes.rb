@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   get 'questions/create'
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :questions, only: %i[create] do
     resources :answers, only: %i[create]
   end
+<<<<<<< HEAD
 
   #Juan comment: Not sure if it shoulf be this way, because we
   # don't have a 'rights' model (because it's static info):
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   # resources :rights, only: %i[show]
 
   #So for the moment I'm going to do it this way:
+=======
+>>>>>>> master
 
   get 'termination', to: 'rights#termination'
   get 'resignation', to: 'rights#resignation'
