@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.user = current_user
-    @forum = forum.find(params[:forum_id])
+    @forum = Forum.find(params[:forum_id])
     @question.forum = @forum
     @question.save
 
