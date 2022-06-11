@@ -1,7 +1,4 @@
 class QuestionsController < ApplicationController
-  def new
-    @question = Question.new
-  end
 
   def create
     @question = Question.new(question_params)
@@ -11,7 +8,7 @@ class QuestionsController < ApplicationController
     @question.save
 
     if @question.save!
-      redirect_to forum_path(@question)
+      redirect_to forum_path(@forum)
     else
       render "forums/show"
     end
