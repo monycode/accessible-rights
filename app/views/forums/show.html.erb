@@ -1,0 +1,30 @@
+
+<div class="forum-banner">
+  <div class="container">
+    <h1 class="forum-banner-title">Forum</p>
+    <p> The lawyers of the accesible rights community are here to help!</p>
+  </div>
+</div>
+
+<h1><%= "Add a new question" %></h1>
+<br>
+  <%= simple_form_for [ @forum, @question ] do |f| %>
+    <%= f.input :title, placeholder: "Whats your question?" %>
+    <%= f.input :content, placeholder: "Add detailed information about your question" %>
+    <p><%= f.submit "Add question", class: "btn btn-primary" %></p>
+  <% end %>
+
+<div class="forum-questions">
+  <h1><%= @forum.name %></h1>
+
+  <div class="questions">
+    <% @forum.questions.each do |question| %>
+    <div class="question-card">
+      <div id="question-<%= question.id %>">
+        <p><%= question.title %></p>
+        <p><%= question.content %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
