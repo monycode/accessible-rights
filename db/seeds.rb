@@ -8,12 +8,22 @@
 
 require "faker"
 
-# User.destroy_all
-# Question.destroy_all
-# Answer.destroy_all
+Question.destroy_all
+Answer.destroy_all
+Forum.destroy_all
+User.destroy_all
+
+puts "seeding begins"
+
+main_user = User.create!(
+  email: 'mainuser@gmail.com',
+  password: "1234password",
+  password_confirmation: "1234password",
+  name: "John Smith"
+)
 
 users = []
-10.times do
+14.times do
   users << User.create!(
     email: Faker::Internet.email,
     password: "1234password",
@@ -24,7 +34,7 @@ end
 
 # TERMINATION
 
-termanation_forum = Forum.create!(
+termination_forum = Forum.create!(
   name: 'Termination'
 )
 
@@ -51,7 +61,7 @@ question_1 = Question.create!(
            'of claims. Has anyone had success with a wrongful termination lawsuit'\
            'or settlement? If so, how long was the process from start to end and'\
            'roughly what was the pre trial or trial settlement amount?',
-  forum: termanation_forum,
+  forum: termination_forum,
   user: users.sample
 )
 
@@ -64,7 +74,7 @@ answer_1 = Answer.create!(
 question_2 = Question.create!(
   title: "Wrongful Termination Settlement",
   content: "I was terminated in January from a tech companywith no probationary period, formal performance improvement plan or warning. I believe my terminationwas a retaliatory act after raising alarm about falsifiedinformation within the company. I received a severance offer,but chose not to proceed with it as they requested.",
-  forum: termanation_forum,
+  forum: termination_forum,
   user: users.sample
 )
 
@@ -77,7 +87,7 @@ answer_2 = Answer.create!(
 question_3 = Question.create!(
   title: 'I was Unfairly fired from Five Guys',
   content: 'I have been working at Five Guys for about three months now as part-time work to help pay for university. Everything has been going well, until a month ago a new manager came in and randomly started firing people without warning or time to look for another job. Is this fair, what can I do?',
-  forum: termanation_forum,
+  forum: termination_forum,
   user: users.sample
 )
 
@@ -90,7 +100,7 @@ answer_3 = Answer.create!(
 question_4 = Question.create!(
   title: 'Can my employer fire me for Medical Reasons on a probation period?',
   content: "For context this isn’t about me but one of my former co-workers. She requested off because she had a flight to catch to go for surgery. She notified our employer and I assumed approved it because she agreed to update UKG but come to find out our employer had said that she needed someone to cover the shift. No one (even me) could cover it. So she just went and fired her on the spot. We just want to know if we could take this to court even though she was on a probation period.",
-  forum: termanation_forum,
+  forum: termination_forum,
   user: users.sample
   )
 
@@ -103,7 +113,7 @@ answer_4 = Answer.create!(
 question_5 = Question.create!(
   title: 'Can I fire an employee without warning?',
   content: "I own a small business and hired my first employee about 4 months ago. It's a retail store and the employee manages the store on his own when I am not able to be there. Last week he messaged me saying square wasn't working and he wasn't able to clock in when he got there. I told him to clock in when it started working and I would adjust it on the back end. He told me he got there at 1030 am and would be leaving at 5. I checked my alarm log to see when he opened the store and he didn't get there until 11. He texted me 3 different times that day saying he started at 1030, but the alarm log and security video shows him coming in at 11. I went back through the logs and he has consistently been clocking in a half hour early and clocking out a half hour late. Square has an app, so I am assuming he's using the app to clock in and out when he's not in the store. Can I fire him for this, or do I need to give him a warning to try and correc the behaviour? I don't trust him anymore so I don't want him in my store alone.",
-  forum: termanation_forum,
+  forum: termination_forum,
   user: users.sample
 )
 
@@ -230,7 +240,7 @@ answer_13 = Answer.create!(
 question_14 = Question.create!(
   title: "unpaid mediatory meeting",
   content: "I have been working at this company for 6 months, and the company stated that all employees must attend these meetings. The thing is, these meetings are three hours long, but they wont be paying us for those hours. Can my employer terminate me for not attending an unpaid, after-hours, mandatory meeting?",
-  forum:  unpaid_hours_forum,
+  forum: unpaid_hours_forum,
   user: users.sample
   )
 
@@ -239,3 +249,4 @@ answer_14 = Answer.create!(
   user: users.sample,
   question: question_14
 )
+puts "seeding ends"
