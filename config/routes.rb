@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :questions, only: %i[create] do
     resources :answers, only: %i[create]
   end
-  
-   resources :forums, only: :show do
+
+   resources :forums, param: :name, only: :show do
     resources :questions, only: :create
   end
 
