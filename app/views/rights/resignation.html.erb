@@ -68,15 +68,13 @@
       <div class="cards-container">
         <div class="individual-card-container">
           <%= image_tag('ask_a_question_icon.png', class: "question-icon") %>
-          <%= link_to forums_path do %>
+          <%= link_to forum_path("Resiging") do %>
             <button class="next-steps-button">Ask a question</button>
           <% end %>
         </div>
         <div class="individual-card-container">
           <%= image_tag('calculator_icon.png', class: "calculator-icon") %>
-          <%= link_to calculator_path do %>
             <button class="next-steps-button">Calculator</button>
-          <% end %>
         </div>
       </div>
   </div>
