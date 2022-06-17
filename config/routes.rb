@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   end
 
 
+  resources :forums, param: :name, only: :show
 
-  resources :forums, param: :name, only: :show do
+  resources :forums do
     resources :questions, only: :create
   end
 
