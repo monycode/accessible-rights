@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  get 'questions/create'
   devise_for :users
   root to: 'pages#home'
 
-  resources :questions, only: %i[create] do
+  resources :questions, only: %i[show] do
     resources :answers, only: %i[create]
   end
-  
-   resources :forums, only: :show do
-    resources :questions, only: :create
+
+  resources :forums, only: :show do
+    resources :questions, only: [:create]
   end
 
   get 'termination', to: 'rights#termination'

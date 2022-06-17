@@ -21,7 +21,7 @@
     <% @forum.questions.each do |question| %>
     <div class="question-card">
       <div id="question-<%= question.id %>">
-        <p><%= question.title %></p>
+        <p><%=link_to question.title, question_path(question) %></p>
         <p><%= question.content %></p>
       </div>
     </div>
