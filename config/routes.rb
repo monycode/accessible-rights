@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   resources :forums, param: :name, only: :show
 
-  resources :forums do
-    resources :questions, only: :create
-  end
+
+  post 'forums/:forum_id/questions', to: 'questions#create', as: 'forum_questions'
+
 
   get 'termination', to: 'rights#termination'
   get 'resignation', to: 'rights#resignation'
