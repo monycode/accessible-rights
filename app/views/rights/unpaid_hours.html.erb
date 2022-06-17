@@ -7,11 +7,15 @@
 
 <div class="main-section-container">
   <div class="title-container">
-    <h1>Unpaid hours</h1>
-    <p>Find out more information about resignation and your rights as an employee</p>
+    <h1>Termination</h1>
+    <p>Find out more information about termination and
+    <br>
+     your rights as an employee</p>
+    <div class="line"></div>
+
   </div>
   <div class="explanation-container">
-    <h3>title</h3>
+    <h3>Unfairly terminated?</h3>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         tempor ipsum in libero aliquam, vel vulputate odio sollicitudin.
@@ -39,7 +43,7 @@
         lectus. Nam at tortor elit. Curabitur tempor neque tortor, in euismod dui dapibus at.
         Nullam sit amet orci turpis.
     </p>
-    <h3>title</h3>
+    <h3>What can you do?</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
       tempor ipsum in libero aliquam, vel vulputate odio sollicitudin.
@@ -56,32 +60,43 @@
       <li>Lorem ipsum</li>
     </ul>
   </div>
+
+  <hr class="section-break-line">
+
   <div class="next-steps-section">
     <h2>Dig deeper into next steps</h2>
-    <div class="ask-a-question-container">
-      <img src="#" alt="ask a question icon" />
-      <a class="" href="#">Ask a question</a>
-    </div>
-    <div class="calculator-container">
-      <img src="#" alt="ask a question icon" />
-      <a class="" href="#">Calculator</a>
-    </div>
+      <div class="cards-container">
+        <div class="individual-card-container">
+          <%= image_tag('ask_a_question_icon.png', class: "question-icon") %>
+          <button class="next-steps-button">Ask a question</button>
+        </div>
+        <div class="individual-card-container">
+          <%= image_tag('calculator_icon.png', class: "calculator-icon") %>
+          <button class="next-steps-button">Calculator</button>
+        </div>
+      </div>
   </div>
+
+  <hr class="section-break-line">
+
   <div class="related-problems-section">
     <h2>Related problems you might want to check</h2>
-    <div class="resigning-container">
-      <h3>resigning</h3>
-      <img src="images/blue_resign_icon.png" alt="resigning icon" />
-      <a class="" href="#">Read</a>
+    <div class="sections-container">
+        <div class="individual-section-container">
+          <h3>resigning</h3>
+          <%= image_tag('blue_resign_icon.png', class: "blue-resign-icon") %>
+          <button class="categories-button">Read</button>
+        </div>
+        <div class="individual-section-container">
+          <h3>Unpaid Bonus</h3>
+          <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-resign-icon") %>
+          <button class="categories-button">Read</button>
+        </div>
+        <div class="individual-section-container">
+          <h3>Unpaid hours</h3>
+          <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-resign-icon") %>
+          <button class="categories-button">Read</button>
+        </div>
+     </div>
     </div>
-    <div class="unpaid-bonus-container">
-      <h3>Unpaid bonus</h3>
-      <img src="blue_unpaid_bonus_icon.png" alt="unpaid bonus icon" />
-      <a class="" href="#">Read</a>
-    </div>
-    <div class="unpaid-hours-container">
-      <h3>Unpaid hours</h3>
-      <img src="blue_unpaid_hours_icon.png" alt="unpaid hours icon" />
-      <a class="" href="#">Read</a>
-    </div>
-  </div>
+</div>

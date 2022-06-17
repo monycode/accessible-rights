@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     resources :answers, only: %i[create]
   end
 
-  resources :forums, only: :show do
-    resources :questions, only: [:create]
+
+
+  resources :forums, param: :name, only: :show do
+    resources :questions, only: :create
   end
 
   get 'termination', to: 'rights#termination'

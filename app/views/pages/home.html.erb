@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="home-banner">
   <div class="banner-text">
     <h1 class="main-title">ACCESIBLE RIGHTS</h1>
     <div class="line"></div>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="categories-container">
-    <div class="center-grid ">
+    <div class="center-grid">
       <h4 class="cards-white">Know the rights that matter  </h4>
       <%= image_tag('Home/balance.png',  class: "icon-home") %>
       <button class="yellow-button">Read</button>
@@ -24,46 +24,75 @@
     </div>
   </div>
 </div>
+<div class = "bg-white">
+  <div class="container">
+    <div>
+      <div>
+        <h2 class="center-grid pt-5 blue-title">You can trust us</h2>
+        <p class="home-text-grey center">We have successfully assisted over 1000 workers in finding the right
+        information to empower them to fight for their labour laws</p>
 
-<div class="white-background">
-  <div>
-    <h2>You can trust us</h2>
-    <p>We have successfully assisted over 1000 workers in finding the right
-    information to empower them to fight for their labour laws</p>
-    <h4>knowing your legal rights shouldn't be expensive</h4>
+        <div class="d-flex justify-content-between pt-4 pb-4">
+          <div> </div>
+          <div class="line"></div>
+          <div> </div>
+        </div>
+
+        <h4 class="text-blue pb-5 pt-5">Knowing your legal rights shouldn't be expensive</h4>
+      </div>
+
+      <div class="row pt-5 pb-5">
+        <div class="col-8">
+          <h2 class="blue-title center-grid">You are not alone</h2>
+          <p class="home-text-grey">Together we are stronger, we make up the largest
+          law and rights online community. Every single one
+          of us willing to help you.</p>
+        </div>
+        <div class="col-4 pb-5">
+          <%= image_tag('Home/hands.png', class: "image-hands") %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <h2>You are not alone</h2>
-    <p>Together we are stronger, we make up the largest
-    law and rights online community. Every single one
-    of us willing to help you.</p>
+  <div class="gradient-bg pt-3 pb-5">
+    <div class="container pb-5">
+      <div class="titles-white center-grid pb-3">Choose a topic:</div>
+      <div class="row pt-3">
+        <div class="col-6 center-grid">
+          <%= image_tag('Home/contract.png', class: "icon-topic") %>
+          <%= link_to termination_path do %>
+            <button class="yellow-button">Terminated</button>
+          <% end %>
+        </div>
+
+        <div class="col-6 center-grid">
+          <%= image_tag('Home/resign.png', class: "icon-topic") %>
+          <%= link_to resignation_path do %>
+            <button class="yellow-button">Resigning</button>
+          <% end %>
+        </div>
+      </div>
+
+
+      <div class="row pt-5">
+        <div class="col-6 center-grid">
+          <%= image_tag('Home/pouch.png', class: "icon-topic") %>
+          <%= link_to unpaid_bonus_path do %>
+            <button class="yellow-button">Unpaid Bonus</button>
+          <% end %>
+        </div>
+
+        <div class="col-6 center-grid">
+          <%= image_tag('Home/price.png', class: "icon-topic") %>
+          <%= link_to unpaid_hours_path do %>
+            <button class="yellow-button">Unpaid Hours</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="gradient-background">
-  <div>
-    <%= image_tag('Home/contract.png', class: "d-block w-10") %>
-    <button>Terminated</button>
-  </div>
-
-  <div>
-    <%= image_tag('Home/resign.png', class: "d-block w-10") %>
-    <button>Resigning</button>
-  </div>
-
-  <div>
-    <%= image_tag('Home/pouch.png', class: "d-block w-10") %>
-    <button>Unpaid Bonus</button>
-  </div>
-
-  <div>
-    <%= image_tag('Home/price.png', class: "d-block w-10") %>
-    <button>Unpaid Hours</button>
-  </div>
-</div>
-
-<p>Find me in app/views/pages/home.html.erb</p>
 
 <% if user_signed_in? %>
   <%- current_user.email %>
