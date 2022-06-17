@@ -86,17 +86,23 @@
         <div class="individual-section-container">
           <h3>resigning</h3>
           <%= image_tag('blue_resign_icon.png', class: "blue-resign-icon") %>
-          <button class="categories-button">Read</button>
+          <%= link_to resignation_path do %>
+            <button class="categories-button">Read</button>
+          <% end %>
         </div>
         <div class="individual-section-container">
           <h3>Unpaid Bonus</h3>
           <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-resign-icon") %>
-          <button class="categories-button">Read</button>
+          <%= link_to unpaid_bonus_path do %>
+            <button class="categories-button">Read</button>
+          <% end %>
         </div>
         <div class="individual-section-container">
           <h3>Unpaid hours</h3>
           <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-resign-icon") %>
-          <button class="categories-button">Read</button>
+          <%= link_to unpaid_hours_path do %>
+            <button class="categories-button">Read</button>
+          <% end %>
         </div>
      </div>
     </div>
