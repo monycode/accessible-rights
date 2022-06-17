@@ -61,12 +61,16 @@
       <div class="row pt-3">
         <div class="col-6 center-grid">
           <%= image_tag('Home/contract.png', class: "icon-topic") %>
-          <button class="yellow-button">Terminated</button>
+          <%= link_to termination_path do %>
+            <button class="yellow-button">Terminated</button>
+          <% end %>
         </div>
 
         <div class="col-6 center-grid">
           <%= image_tag('Home/resign.png', class: "icon-topic") %>
-          <button class="yellow-button">Resigning</button>
+          <%= link_to resignation_path do %>
+            <button class="yellow-button">Resigning</button>
+          <% end %>
         </div>
       </div>
 
@@ -74,19 +78,21 @@
       <div class="row pt-5">
         <div class="col-6 center-grid">
           <%= image_tag('Home/pouch.png', class: "icon-topic") %>
-          <button class="yellow-button">Unpaid Bonus</button>
+          <%= link_to unpaid_bonus_path do %>
+            <button class="yellow-button">Unpaid Bonus</button>
+          <% end %>
         </div>
 
         <div class="col-6 center-grid">
           <%= image_tag('Home/price.png', class: "icon-topic") %>
-          <button class="yellow-button">Unpaid Hours</button>
+          <%= link_to unpaid_hours_path do %>
+            <button class="yellow-button">Unpaid Hours</button>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<p>Find me in app/views/pages/home.html.erb</p>
 
 <% if user_signed_in? %>
   <%- current_user.email %>
