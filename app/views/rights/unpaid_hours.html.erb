@@ -68,7 +68,9 @@
       <div class="cards-container">
         <div class="individual-card-container">
           <%= image_tag('ask_a_question_icon.png', class: "question-icon") %>
-          <button class="next-steps-button">Ask a question</button>
+          <%= link_to forum_path("Unpaid Hours") do %>
+            <button class="next-steps-button">Ask a question</button>
+          <% end %>
         </div>
         <div class="individual-card-container">
           <%= image_tag('calculator_icon.png', class: "calculator-icon") %>
