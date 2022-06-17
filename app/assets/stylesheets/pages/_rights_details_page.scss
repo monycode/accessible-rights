@@ -1,0 +1,135 @@
+.banner-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #283060;
+}
+
+.line {
+  border-bottom: 5px solid #FEF054;
+  display: block;
+  width: 300px;
+  margin-top: -20px;
+}
+
+.main-section-container {
+  margin-top: 45px;
+}
+
+.title-container {
+  text-align: -webkit-center;
+}
+
+.title-container h1 {
+  color: #283060;
+  font-weight: bold;
+}
+
+.title-container p {
+  color: #888888;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.explanation-container {
+  margin-bottom: 30px;
+}
+
+.explanation-container h3 {
+  color: #505FB3;
+}
+
+.explanation-container p {
+  color: #888888;
+}
+
+.explanation-container li {
+  color: #888888;
+}
+
+.section-break-line {
+  border-top: 2px solid #000000;
+  width: 70%;
+  align: center;
+  margin-left: 15%;
+}
+
+.next-steps-section {
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.next-steps-section h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #283060;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+}
+
+.individual-card-container {
+  background-color: #283060;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  display: grid;
+}
+
+.question-icon {
+  height: 70px;
+}
+
+.calculator-icon {
+  height: 60px;
+}
+
+.related-problems-section {
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.related-problems-section h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #283060;
+  margin-bottom: 30px;
+}
+
+.sections-container {
+  display: flex;
+  justify-content: center;
+}
+
+.individual-section-container h3 {
+  color:#505FB3;
+}
+
+.next-steps-button {
+  background-color: #FEF054;
+  border: none;
+  color: rgb(23, 16, 16);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.categories-button {
+  background-color: #FEF054;
+  border: none;
+  color: rgb(23, 16, 16);
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+}
