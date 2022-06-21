@@ -6,14 +6,21 @@
   </div>
 </div>
 
-<p> The lawyers of the accesible rights community are here to help!</p>
-<h1><%= "Add a new question" %></h1>
-<br>
+<div class="add-a-new-question-section-container">
+  <p> The lawyers of the accesible rights community are here to help!</p>
+  <div class="line"></div>
+  <h1><%= "Add a new question" %></h1>
+</div>
+  <br>
+<div class="forum-form-container">
   <%= simple_form_for [ @forum, @question ] do |f| %>
     <%= f.input :title, placeholder: "Whats your question?" %>
     <%= f.input :content, placeholder: "Add detailed information about your question" %>
     <p><%= f.submit "Add question", class: "btn btn-primary" %></p>
   <% end %>
+</div>
+
+
 
 <div class="forum-questions">
   <h1><%= @forum.name %></h1>
