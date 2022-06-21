@@ -4,6 +4,10 @@
   color: white;
 }
 
+.forum-banner-container {
+  text-align: center;
+}
+
 .question-card {
     overflow: hidden;
     height: 120px;
@@ -13,3 +17,18 @@
     align-items: center;
     margin-top: 25px;
   }
+
+  .forum-banner-title {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 300px;
+    text-decoration: underline 5px solid #FEF054 ;
+  }
+
+  // .forum-title-line {
+  //   border-bottom: 5px solid #FEF054;
+  //   display: block;
+  //   width: 250px;
+  //   margin-top: -20px;
+  // }

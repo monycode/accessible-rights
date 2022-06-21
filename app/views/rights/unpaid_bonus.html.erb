@@ -1,21 +1,22 @@
-<div class="banner">
+<div class="unpaid-bonus-banner">
   <div class="container">
     <h1 class="banner-title">Unpaid bonus</p>
+    <div class="line"></div>
   </div>
 </div>
 
 
 <div class="main-section-container">
   <div class="title-container">
-    <h1>Termination</h1>
-    <p>Find out more information about termination and
+    <h1>Unpaid Bonus</h1>
+    <p>Find out more information about unpaid bonuses and
     <br>
      your rights as an employee</p>
     <div class="line"></div>
 
   </div>
   <div class="explanation-container">
-    <h3>Unfairly terminated?</h3>
+    <h3>Your employer don't pay your bonuses?</h3>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         tempor ipsum in libero aliquam, vel vulputate odio sollicitudin.
@@ -86,21 +87,21 @@
     <div class="sections-container">
         <div class="individual-section-container">
           <h3>resigning</h3>
-          <%= image_tag('blue_resign_icon.png', class: "blue-resign-icon") %>
+          <%= image_tag('blue_resign_icon.png', class: "blue-icon") %>
           <%= link_to resignation_path do %>
             <button class="categories-button">Read</button>
           <% end %>
         </div>
         <div class="individual-section-container">
-          <h3>Unpaid Bonus</h3>
-          <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-resign-icon") %>
-          <%= link_to unpaid_bonus_path do %>
+          <h3>Terminated</h3>
+          <%= image_tag('blue_termination_icon.png', class: "blue-icon") %>
+          <%= link_to termination_path do %>
             <button class="categories-button">Read</button>
           <% end %>
         </div>
         <div class="individual-section-container">
           <h3>Unpaid hours</h3>
-          <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-resign-icon") %>
+          <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-icon") %>
           <%= link_to unpaid_hours_path do %>
             <button class="categories-button">Read</button>
           <% end %>

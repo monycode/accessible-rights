@@ -39,7 +39,7 @@ termination_forum = Forum.create!(
 )
 
 resigning_forum = Forum.create!(
-  name: 'Resiging'
+  name: 'Resigning'
 )
 
 unpaid_bonus_forum = Forum.create!(
