@@ -10,21 +10,55 @@
 
 .question-card {
     overflow: hidden;
-    height: 120px;
+    height: 250px;
     border: 1px solid black;
     // box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     margin-top: 25px;
-  }
+}
 
-  .forum-banner-title {
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 80px;
-    line-height: 300px;
-    text-decoration: underline 5px solid #FEF054 ;
-  }
+.forum-banner-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 300px;
+  text-decoration: underline 5px solid #FEF054 ;
+}
+
+.add-a-new-question-section-container p {
+  color: #888888;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.add-a-new-question-section-container h1 {
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+
+.add-a-new-question-section-container {
+  text-align: -webkit-center;
+}
+
+.forum-form-container {
+  width: 900px;
+  margin: 0 20%;
+  margin-bottom: 30px;
+}
+
+.forum-questions {
+  margin: 0 10%;
+  margin-bottom: 60px;
+}
+
+.question-card {
+  padding: 25px;
+  border-radius: 5px;
+}
+
 
   // .forum-title-line {
   //   border-bottom: 5px solid #FEF054;
