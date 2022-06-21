@@ -4,7 +4,7 @@ class CalculatorController < ApplicationController
   end
 
   def new
-    @result = Calculator.total
+    @result = Calculator.daily_salary + Calculator.vacations + Calculator.vacation_bonus_total + Calculator.christmas_bonus + Calculator.unpaid_working_days + Calculator.compensation
     render :index
   end
 end
