@@ -1,11 +1,12 @@
 
 <div class="forum-banner">
-  <div class="container">
-    <h1 class="forum-banner-title">Forum</p>
-    <p> The lawyers of the accesible rights community are here to help!</p>
+  <div class="forum-banner-container">
+    <h1 class="forum-banner-title">Forum</h1>
+      <%# <div class="forum-title-line"></div> %>
   </div>
 </div>
 
+<p> The lawyers of the accesible rights community are here to help!</p>
 <h1><%= "Add a new question" %></h1>
 <br>
   <%= simple_form_for [ @forum, @question ] do |f| %>
