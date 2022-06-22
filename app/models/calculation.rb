@@ -49,7 +49,11 @@ class Calculation
   end
 
   def unpaid_days
-    (@end_date - current_month_start_date).to_i + 1
+    if @end_date.day < 15
+      return (@end_date - current_month_start_date).to_i + 1
+    else
+      return (@end_date - (current_month_start_date + 14)).to_i
+    end
   end
 
   def unpaid_working_days
