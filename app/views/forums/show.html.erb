@@ -1,9 +1,6 @@
 
 <div class="forum-banner">
-  <div class="forum-banner-container">
-    <h1 class="forum-banner-title">Forum</h1>
-      <%# <div class="forum-title-line"></div> %>
-  </div>
+  <h1>FORUM</h1>
 </div>
 
 <div class="add-a-new-question-section-container">
@@ -12,6 +9,36 @@
   <h1><%= "Add a new question" %></h1>
 </div>
   <br>
+
+<div class= "container forums-container">
+  
+  <div class="d-flex justify-content-evenly p-3 icon-text">
+    <div>
+      <%= link_to forum_path("Resiging") do %>
+        <h3>resigning</h3>
+        <%= image_tag('blue_resign_icon.png', class: "blue-resign-icon icon-size") %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to forum_path("Unpaid Hours") do %>
+        <h3>Unpaid hours</h3>
+        <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-resign-icon icon-size") %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to forum_path("Unpaid Bonus") do %>
+        <h3>Unpaid Bonus</h3>
+        <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-resign-icon icon-size") %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to forum_path("Termination") do %>
+        <h3>Termination</h3>
+        <%= image_tag('contract-blue.png', class: "blue-resign-icon icon-size") %>
+      <% end %>
+    </div>
+  </div>
+
 <div class="forum-form-container">
   <%= simple_form_for [ @forum, @question ] do |f| %>
     <%= f.input :title, placeholder: "Whats your question?" %>
@@ -20,19 +47,18 @@
   <% end %>
 </div>
 
-
-
-<div class="forum-questions">
-  <h1><%= @forum.name %></h1>
-
-  <div class="questions">
-    <% @forum.questions.each do |question| %>
-    <div class="question-card">
-      <div id="question-<%= question.id %>">
-        <p><%=link_to question.title, question_path(question) %></p>
-        <p><%= question.content %></p>
-      </div>
+  <div class="forum-questions ">
+    <h1><%= @forum.name %></h1>
+      <% @forum.questions.each do |question| %>
+        <div class="card border-secondary shadow p-3 mb-5 bg-body rounded">
+        <div id="question-<%= question.id %>">
+          <div class="card-body text-secondary">
+            <h5 class="card-title"><%=link_to question.title, question_path(question) %></h5>
+            <p class="card-text"><%= question.content %></p>
+          </div>
+        </div>
+        </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>
