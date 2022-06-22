@@ -1,13 +1,14 @@
-<div class="banner">
+<div class="resignation-banner">
   <div class="container">
     <h1 class="banner-title">Resignation</p>
+    <div class="forum-title-line"></div>
   </div>
 </div>
 
 
 <div class="main-section-container">
   <div class="title-container">
-    <h1>Termination</h1>
+    <h1>Resignation</h1>
     <p>Find out more information about termination and
     <br>
      your rights as an employee</p>
@@ -15,7 +16,7 @@
 
   </div>
   <div class="explanation-container">
-    <h3>Unfairly terminated?</h3>
+    <h3>Unfairly paid after resignation?</h3>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         tempor ipsum in libero aliquam, vel vulputate odio sollicitudin.
@@ -68,7 +69,7 @@
       <div class="cards-container">
         <div class="individual-card-container">
           <%= image_tag('ask_a_question_icon.png', class: "question-icon") %>
-          <%= link_to forum_path("Resiging") do %>
+          <%= link_to forum_path("Resigning") do %>
             <button class="next-steps-button">Ask a question</button>
           <% end %>
         </div>
@@ -85,22 +86,22 @@
     <h2>Related problems you might want to check</h2>
     <div class="sections-container">
         <div class="individual-section-container">
-          <h3>resigning</h3>
-          <%= image_tag('blue_resign_icon.png', class: "blue-resign-icon") %>
+          <h3>Terminated</h3>
+          <%= image_tag('blue_termination_icon.png', class: "blue-icon") %>
           <%= link_to resignation_path do %>
             <button class="categories-button">Read</button>
           <% end %>
         </div>
         <div class="individual-section-container">
           <h3>Unpaid Bonus</h3>
-          <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-resign-icon") %>
+          <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-icon") %>
           <%= link_to unpaid_bonus_path do %>
             <button class="categories-button">Read</button>
           <% end %>
         </div>
         <div class="individual-section-container">
           <h3>Unpaid hours</h3>
-          <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-resign-icon") %>
+          <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-icon") %>
           <%= link_to unpaid_hours_path do %>
             <button class="categories-button">Read</button>
           <% end %>

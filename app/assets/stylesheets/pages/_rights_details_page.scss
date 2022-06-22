@@ -12,6 +12,7 @@
 }
 
 .main-section-container {
+  margin: 0 10%;
   margin-top: 45px;
 }
 
@@ -55,9 +56,9 @@
 }
 
 .next-steps-section {
-  margin-top: 60px;
+  margin-top: 45px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 }
 
 .next-steps-section h2 {
@@ -78,14 +79,37 @@
   padding: 20px;
   border-radius: 5px;
   display: grid;
+  width: 220px;
+  margin-bottom: 50px;
+}
+
+.individual-card-container a {
+  margin-bottom: -30px;
 }
 
 .question-icon {
   height: 70px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .calculator-icon {
   height: 60px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.next-steps-button {
+  background-color: #FEF054;
+  border: none;
+  color: rgb(23, 16, 16);
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: -30px;
 }
 
 .related-problems-section {
@@ -98,7 +122,7 @@
   font-size: 35px;
   font-weight: bold;
   color: #283060;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .sections-container {
@@ -106,30 +130,31 @@
   justify-content: center;
 }
 
-.individual-section-container h3 {
-  color:#505FB3;
+.individual-section-container {
+  display: grid;
 }
 
-.next-steps-button {
-  background-color: #FEF054;
-  border: none;
-  color: rgb(23, 16, 16);
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 5px;
+.individual-section-container h3 {
+  color:#505FB3;
+  margin: 30px;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+.blue-icon {
+  height: 80px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .categories-button {
   background-color: #FEF054;
   border: none;
   color: rgb(23, 16, 16);
-  padding: 5px 15px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 5px;
 }
