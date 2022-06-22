@@ -1,0 +1,27 @@
+<%= form_for :calculator, url: { action: :new }, method: :get do |f|   %>
+  <div class="form-group">
+    <%# <%= f.label :start_date, { class: "form-label"} %>
+    <%# <%= date_field_tag :start_date, params[:start_date] %> %>
+    <%# <%= f.label :end_date, { class: "form-label"} %> %>
+    <%# <%= date_field_tag :end_date, params[:end_date] %> %> %>
+    <%= f.label :year_worked_days, { class: "form-label"} %>
+    <%= text_field_tag :year_worked_days, params[:year_worked_days] %>
+  </div>
+  <div class="form-group">
+    <%= f.label :monthly_salary, { class: "form-label"} %>
+    <%= text_field_tag :monthly_salary, params[:monthly_salary] %>
+    <%= f.label :cause_of_termination, { class: "form-label"} %>
+    <%= select_tag :cause_of_termination, options_for_select([['resigned'], ['unjustified laid off'], ['justified laid off']], params[:cause_of_termination]) %>
+  </div>
+  <div class="form-group">
+  <%= f.label :vacation_days %>
+  <%= text_field_tag :vacation_days, params[:vacation_days] %>
+  <%= f.label :christmas_bonus_days %>
+  <%= text_field_tag :christmas_bonus, params[:christmas_bonus] %>
+  </div>
+  <%= f.submit 'Calculate!' %>
+<% end %>
+
+<% unless @result.nil? %>
+  <p><%= @result %></p>
+<% end %>
