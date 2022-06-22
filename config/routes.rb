@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   get 'unpaid_bonus', to: 'rights#unpaid_bonus'
   get 'unpaid_hours', to: 'rights#unpaid_hours'
 
-  resources :calculator
+  resources :calculations, only: %i[create new]
 end
