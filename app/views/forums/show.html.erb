@@ -6,32 +6,32 @@
 <div class="add-a-new-question-section-container">
   <p> The lawyers of the accesible rights community are here to help!</p>
   <div class="line"></div>
-  <h1><%= "Add a new question" %></h1>
+  <h1>Choose a category to filter questions and answers</h1>
 </div>
   <br>
 
 <div class= "container forums-container">
-  
-  <div class="d-flex justify-content-evenly p-3 icon-text">
-    <div>
+
+  <div class="forum-categories-container">
+    <div class="forum-category-card">
       <%= link_to forum_path("Resiging") do %>
         <h3>resigning</h3>
         <%= image_tag('blue_resign_icon.png', class: "blue-resign-icon icon-size") %>
       <% end %>
     </div>
-    <div>
+    <div class="forum-category-card">
       <%= link_to forum_path("Unpaid Hours") do %>
         <h3>Unpaid hours</h3>
         <%= image_tag('blue_unpaid_hours_icon.png', class: "blue-resign-icon icon-size") %>
       <% end %>
     </div>
-    <div>
+    <div class="forum-category-card">
       <%= link_to forum_path("Unpaid Bonus") do %>
         <h3>Unpaid Bonus</h3>
         <%= image_tag('blue_unpaid_bonus_icon.png', class: "blue-resign-icon icon-size") %>
       <% end %>
     </div>
-    <div>
+    <div class="forum-category-card">
       <%= link_to forum_path("Termination") do %>
         <h3>Termination</h3>
         <%= image_tag('contract-blue.png', class: "blue-resign-icon icon-size") %>
@@ -39,13 +39,18 @@
     </div>
   </div>
 
+  <hr class="forum-section-break-line">
+
 <div class="forum-form-container">
+<h1>Ask a question</h1>
   <%= simple_form_for [ @forum, @question ] do |f| %>
     <%= f.input :title, placeholder: "Whats your question?" %>
     <%= f.input :content, placeholder: "Add detailed information about your question" %>
-    <p><%= f.submit "Add question", class: "btn btn-primary" %></p>
+    <p><%= f.submit "Add question", class: "submit-question-button" %></p>
   <% end %>
 </div>
+
+  <hr class="forum-section-break-line">
 
   <div class="forum-questions ">
     <h1><%= @forum.name %></h1>
