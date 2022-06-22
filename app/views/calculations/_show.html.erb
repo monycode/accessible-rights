@@ -1,1 +1,7 @@
-<%=  calculation.total_compensation.round(2) %>
+<ul>
+  <li>Vacations compensation $<%=calculation.vacations_compensation.round(2) %></li>
+  <li>Christmas bonus $<%=calculation.christmas_bonus_compensation.round(2) %></li>
+  <li>Unpaid working days $<%=calculation.unpaid_working_days.round(2) %></li>
+  <li>Compensation $<%=calculation.cause_of_termination_compensation.round(2) %></li>
+  <li>Total $<%=calculation.total_compensation.round(2) %></li>
+</ul>
