@@ -1,0 +1,9 @@
+<%= simple_form_for calculation do |f| %>
+  <%= f.input :start_date, label: 'Start Date',  as: :date, html5: true %>
+  <%= f.input :end_date, label: 'End Date', as: :date, html5: true %>
+  <%= f.input :monthly_salary, label: 'Monthly Salary' %>
+  <%= f.input :cause_of_termination, label: 'Cause of Termination', collection: [ "Unjustified dismissal", "Fair dismissal", "Resigned"] %>
+  <%= f.input :vacation_days, label: 'Vacation Days' %>
+  <%= f.input :christmas_bonus_days, label: 'Christmas Bonus Days' %>
+  <p><%= f.submit "Calculate", class: "btn btn-primary" %></p>
+<% end %>
