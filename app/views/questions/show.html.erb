@@ -1,24 +1,35 @@
-<div>
-    <% question = @question %>
-      <div class="questions">
-       <div class="question-card">
-          <div id="question-<%= question.id %>">
-          <p><%= question.title %></p>
-           <p><%= question.content %></p>
+<div class= "questions-answer-container">
+    <div>
+      <% question = @question %>
+        <div class="card border-primary shadow p-3 mb-5 bg-body rounded">
+          <div id="question -<%= question.id %>">
+            <div class="question-card">
+              <p class= "title-text"><%= question.title %></p>
+              <p class= "content-text"><%= question.content %></p>
+            </div>
           </div>
         </div>
+    </div>
+
+  <h3>Reply to the question</h3>
+
+  <%= simple_form_for([ @question, @answer ]) do |f| %>
+    <div class="card border-secondary shadow p-3 mb-5 bg-body rounded">
+      <div class="card-body text-secondary">
+        <%= f.input :content %>
+        <%= f.button :submit, class:"btn btn-primary" %>
       </div>
+    </div>
+  <% end %>
+
+  <h3>Answers</h3>
+
+  <% @question.answers.each do |answer| %>
+    <% content_limit = 50 %>
+    <div class="p-3 border bg-white mb-3" data-controller="show-more">
+      <p data-show-more-target="truncated"><%= answer.content.truncate(content_limit) %></p>
+      <p class= "d-none" data-show-more-target="full"><%= answer.content %></p>
+      <%= link_to "Read more", "#", "data-action": 'click->show-more#showContent' if answer.content.length > content_limit%>
+    </div>
+  <% end %>
 </div>
-
-<h3>Reply to the question</h3>
-
-
-<%= simple_form_for([ @question, @answer ]) do |f| %>
-  <%= f.input :content %>
-  <%= f.button :submit, class:"btn btn-primary" %>
-<% end %>
-
-<h3>Answers</h3>
-<% @question.answers.each do |answer| %>
-  <p><%= answer.content %></p>
-<% end %>
