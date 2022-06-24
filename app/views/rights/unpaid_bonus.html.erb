@@ -75,7 +75,9 @@
         </div>
         <div class="individual-card-container">
           <%= image_tag('calculator_icon.png', class: "calculator-icon") %>
-          <button class="next-steps-button">Calculator</button>
+          <%= link_to new_calculation_path do %>
+            <button class="next-steps-button">Calculator</button>
+          <% end %>
         </div>
       </div>
   </div>
