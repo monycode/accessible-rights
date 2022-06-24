@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'resignation', to: 'rights#resignation'
   get 'unpaid_bonus', to: 'rights#unpaid_bonus'
   get 'unpaid_hours', to: 'rights#unpaid_hours'
+  get 'profile', to: 'profiles#show'
 
   resources :calculations, only: %i[create new]
 end
