@@ -44,6 +44,11 @@ lawyers = lawyers_names.map do |name|
   )
   file = File.open("db/support/#{name}.png")
   user.photo.attach(io: file, filename: "#{name}.png", content_type: 'image/png')
+  user.education = "Harvard Law School"
+  user.law_firm = "White & Case"
+  user.location = "Mexico City"
+  user.twitter_handle = "@#{name}lewagonx87"
+  user.linkedin_url = "https://de.linkedin.com/in/peter-schmidt-366894100/es?trk=people-guest_people_search-card"
   user.save!
   user
 end
