@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "blue_logo.png" %>
+      <%= image_tag "logo.svg" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,10 +11,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <%= link_to "Know your rights", root_path, class: "nav-link" %>
+          <a href = "#topics" class="nav-link">Know your rights</a>
         </li>
         <li class="nav-item">
-          <%= link_to "Calculator", root_path, class: "nav-link" %>
+          <%= link_to "Calculator", new_calculation_path, class: "nav-link" %>
         </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">

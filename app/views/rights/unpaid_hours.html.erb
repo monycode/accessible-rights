@@ -75,7 +75,9 @@
         </div>
         <div class="individual-card-container">
           <%= image_tag('calculator_icon.png', class: "calculator-icon") %>
-          <button class="next-steps-button">Calculator</button>
+          <%= link_to new_calculation_path do %>
+            <button class="next-steps-button">Calculator</button>
+          <% end %>
         </div>
       </div>
   </div>
@@ -86,7 +88,7 @@
     <h2>Related problems you might want to check</h2>
     <div class="sections-container">
         <div class="individual-section-container">
-          <h3>resigning</h3>
+          <h3>Resigning</h3>
           <%= image_tag('blue_resign_icon.png', class: "blue-icon") %>
           <%= link_to resignation_path do %>
             <button class="categories-button">Read</button>

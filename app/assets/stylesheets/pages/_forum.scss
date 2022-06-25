@@ -1,29 +1,67 @@
-.forum-banner {
-  background-color: #283060;
-  height: 300px;
-  color: white;
+
+.forums-container{
+
+  h1{
+    font-family: Inter;
+    color: #354186;
+
+  }
+  h2{
+    font-family: Inter;
+    font-weight: 500;
+    color: #354186;
+    font-size: medium;
+    font-size: large;
+    scroll-padding-top: 5%;
+  }
+
+  .icon-size{
+    width: 75px;
+    padding-bottom: 10px;
+  }
+  .icon-text{
+    h3{
+      font-size: large;
+      padding: 10px, 0, 10px, 0;
+      font-family:Inter;
+      font-weight: 300;
+      text-decoration: none;
+    }
+  }
 }
 
-.forum-banner-container {
-  text-align: center;
+.forum-categories-container {
+  display: flex;
+  justify-content: space-evenly;
+
 }
 
-.question-card {
-    overflow: hidden;
-    height: 250px;
-    border: 1px solid black;
-    // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    margin-top: 25px;
+.forum-category-card {
+   display: grid;
+  //  margin-right: 50px;
+ }
+
+.forum-category-card h3 {
+  color:#505FB3;
+  font-size: 20px;
+  // margin: 30px;
+  // padding: 20px;
+  // margin-bottom: 0px;
 }
 
-.forum-banner-title {
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 80px;
-  line-height: 300px;
-  text-decoration: underline 5px solid #FEF054 ;
+// .blue-icon {
+//   height: 80px;
+//   margin: auto;
+//   margin-bottom: 20px;
+// }
+
+.forum-category-card a h3 {
+  color: #505FB3;
+  text-decoration: none;
+}
+
+.add-a-new-question-section-container {
+  text-align: -webkit-center;
 }
 
 .add-a-new-question-section-container p {
@@ -37,32 +75,55 @@
 .add-a-new-question-section-container h1 {
   margin-bottom: 25px;
   margin-top: 30px;
+  color: #283060;
+  font-weight: bold;
 }
 
-.add-a-new-question-section-container {
-  text-align: -webkit-center;
+.forum-section-break-line {
+  border-top: 2px solid #000000;
+  width: 80%;
+  align: center;
+  margin-left: 10%;
 }
 
 .forum-form-container {
-  width: 900px;
-  margin: 0 20%;
-  margin-bottom: 30px;
+  // width: 900px;
+  margin: 50px 10% 50px 10%;
 }
 
-.forum-questions {
+
+.forum-form-container h1 {
+  color: #283060;
+  font-weight: bold;
+}
+
+.forum-questions{
+  padding-top: 30px;
   margin: 0 10%;
   margin-bottom: 60px;
 }
 
-.question-card {
-  padding: 25px;
-  border-radius: 5px;
+.forum-questions h1 {
+  color: #283060;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
+.forum-questions h5 a {
+  color: #505FB3;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  // .forum-title-line {
-  //   border-bottom: 5px solid #FEF054;
-  //   display: block;
-  //   width: 250px;
-  //   margin-top: -20px;
-  // }
+.submit-question-button {
+  background-color: #FEF054;
+  border: none;
+  color: rgb(23, 16, 16);
+  padding: 15px 15px;
+  // text-align: center;
+  // text-decoration: none;
+  // display: inline-block;
+  // font-size: 14px;
+  border-radius: 5px;
+  // margin-bottom: -30px;
+}
