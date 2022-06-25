@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
 
   resources :forums, param: :name, only: :show
+  resources :profiles, only: :show
 
 
   post 'forums/:forum_id/questions', to: 'questions#create', as: 'forum_questions'
