@@ -32,6 +32,21 @@ users = []
   )
 end
 
+puts "creating lawyers"
+
+lawyers_names = ["Peter", "Ben", "Stephanie", "Andrea"]
+lawyers = lawyers_names.map do |name|
+  user = User.new(
+    email: Faker::Internet.email,
+    password: "1234password",
+    password_confirmation: "1234password",
+    name: name
+  )
+  file = File.open("db/support/#{name}.png")
+  user.photo.attach(io: file, filename: "#{name}.png", content_type: 'image/png')
+  user.save!
+  user
+end
 # TERMINATION
 
 termination_forum = Forum.create!(
@@ -67,7 +82,7 @@ question_1 = Question.create!(
 
 answer_1 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_1
 )
 
@@ -80,7 +95,7 @@ question_2 = Question.create!(
 
 answer_2 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_2
 )
 
@@ -93,7 +108,7 @@ question_3 = Question.create!(
 
 answer_3 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_3
 )
 
@@ -106,7 +121,7 @@ question_4 = Question.create!(
 
 answer_4 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_4
 )
 
@@ -119,7 +134,7 @@ question_5 = Question.create!(
 
 answer_5 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_5
 )
 
@@ -137,7 +152,7 @@ question_6 = Question.create!(
 
 answer_6= Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_6
 )
 
@@ -150,7 +165,7 @@ question_7 = Question.create!(
 
 answer_7 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_7
 )
 
@@ -163,7 +178,7 @@ question_8 = Question.create!(
 
 answer_8 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_8
   )
   # UNPAID BONUS
@@ -177,7 +192,7 @@ question_9 = Question.create!(
 
 answer_9 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_9
 )
 
@@ -191,7 +206,7 @@ Additional details, in previous year the bonus was paid at the end of the year b
 
 answer_10 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_10
 )
 
@@ -204,7 +219,7 @@ question_11 = Question.create!(
 
 answer_11 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_11
 )
 
@@ -220,7 +235,7 @@ question_12= Question.create!(
 
 answer_12 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_12
 )
 
@@ -233,7 +248,7 @@ question_13 = Question.create!(
 
 answer_13 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_13
 )
 
@@ -246,7 +261,7 @@ question_14 = Question.create!(
 
 answer_14 = Answer.create!(
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
-  user: users.sample,
+  user: lawyers.sample,
   question: question_14
 )
 puts "seeding ends"
