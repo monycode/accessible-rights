@@ -1,0 +1,9 @@
+<h1>Your question has a new answer!</h1>
+
+<p>Hi <%= @answer.question.user.name %></p>
+<br>
+<p>Your question has been answered by a lawyer:</p>
+<br>
+<div class="card shadow p-3 mb-5 bg-white rounded">
+  <p><%= @answer.content %></p>
+</div>
