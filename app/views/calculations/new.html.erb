@@ -6,60 +6,76 @@
   <p> We are here to help you understand how much you are owed and reclaim what's legally yours!</p>
   <div class="line"></div>
   <h1>Calculate your payments</h1>
-</div>
 
-<div class="calculator-container">
-  <div class="row">
-    <div class="calculator-section-container col-6">
-    <h3 class="calculator-subtitle">Input your information</h3>
-      <%= render "form", calculation: @calculation %>
-    </div>
-    <div class="calculator-section-container col-6">
-    <h3 class="calculator-subtitle">The settlement you are entitled to is:</h3>
-      <% if @calculation.valid? %>
-        <%= render "show", calculation: @calculation %>
-      <% else %>
-        <%= @calculation.errors.full_messages %>
-      <% end %>
+</div class="d-flex justify-content-evenly">
+  <div class="calculator-container">
+    <div class="row g-3 ms-5">
+      <div class="calculator-section-container col-6">
+      <h3 class="calculator-subtitle">Input your information</h3>
+        <%= render "form", calculation: @calculation %>
+      </div>
+      <div class= "col-md-5 col-lg-4 order-md-last">
+        <% if controller.action_name == "new"%>
+          <div class="card  my-5 ms-5 rounded  shadow-sm border-secondary" style="width: 22rem;">
+            <div class="card-header">
+              <p class="fw-bold pt-3 ms-2">Fill The Form To Calculate...</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item p-3 ms-2 text-muted">Vacation compensation ...</li>
+              <li class="list-group-item p-3 ms-2 text-muted">Christmas bonus ...</li>
+              <li class="list-group-item p-3 ms-2 text-muted">Unpaid working days ...</li>
+              <li class="list-group-item p-3 ms-2 text-muted">compensation ...</li>
+              <li class="list-group-item p-3 ms-2 text-muted">total ...</li>
+            </ul>
+          </div>
+        <% else %>
+          <h3 class= "calculator-subtitle ">The settlement you are entitled to is:</h3>
+          <% if @calculation.valid? %>
+            <%= render "show", calculation: @calculation %>
+          <% else %>
+            <%= @calculation.errors.full_messages %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="calculator-disclaimer-container">
- <p>
-    Disclaimer: The displayed ammount is an estimate
-    and should no be considered a legal advice, consult
-    with a lawyer for more information.
-  </p>
-</div>
-
-<hr class="calculator-section-break-line">
-
-<div class="calculator-explanation-container">
-  <h1>Steps to calculate your severance payment</h1>
-  <h2>Related problems you might want to check</h2>
+  <div class="calculator-disclaimer-container p-3 text-center text-muted">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Cras lobortis sapien eu nisi eleifend convallis. Donec
-    quis convallis urna. Integer in imperdiet mi, nec blandit
-    diam. Suspendisse vitae semper diam. Nullam non ante sit
-    amet sem tincidunt faucibus ac id est. Donec eu dui
-    cursus, porta enim ac, tempor elit. Ut sit amet velit ut
-    turpis aliquet finibus non vel dolor. Donec volutpat diam
-    eget lacus interdum placerat. Phasellus nec lorem dui.
-    Nullam aliquam auctor augue a rutrum.
-  </p>
-  <h2>Information</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Cras lobortis sapien eu nisi eleifend convallis. Donec
-    quis convallis urna. Integer in imperdiet mi, nec blandit
-    diam. Suspendisse vitae semper diam. Nullam non ante sit
-    amet sem tincidunt faucibus ac id est. Donec eu dui
-    cursus, porta enim ac, tempor elit. Ut sit amet velit ut
-    turpis aliquet finibus non vel dolor. Donec volutpat diam
-    eget lacus interdum placerat. Phasellus nec lorem dui.
-    Nullam aliquam auctor augue a rutrum.
-  </p>
+      Disclaimer: The displayed ammount is an estimate
+      and should no be considered a legal advice, consult
+      with a lawyer for more information.
+    </p>
+  </div>
 
+  <hr class="calculator-section-break-line">
+
+  <div class="calculator-explanation-container container-md">
+    <h1>Steps to calculate your severance payment</h1>
+    <h2 class = "text-center ">Related problems you might want to check</h2>
+      <p class = "my-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Cras lobortis sapien eu nisi eleifend convallis. Donec
+        quis convallis urna. Integer in imperdiet mi, nec blandit
+        diam. Suspendisse vitae semper diam. Nullam non ante sit
+        amet sem tincidunt faucibus ac id est. Donec eu dui
+        cursus, porta enim ac, tempor elit. Ut sit amet velit ut
+        turpis aliquet finibus non vel dolor. Donec volutpat diam
+        eget lacus interdum placerat. Phasellus nec lorem dui.
+        Nullam aliquam auctor augue a rutrum.
+      </p>
+
+    <h2 class = "text-center ">Information</h2>
+      <p class = "my-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Cras lobortis sapien eu nisi eleifend convallis. Donec
+        quis convallis urna. Integer in imperdiet mi, nec blandit
+        diam. Suspendisse vitae semper diam. Nullam non ante sit
+        amet sem tincidunt faucibus ac id est. Donec eu dui
+        cursus, porta enim ac, tempor elit. Ut sit amet velit ut
+        turpis aliquet finibus non vel dolor. Donec volutpat diam
+        eget lacus interdum placerat. Phasellus nec lorem dui.
+        Nullam aliquam auctor augue a rutrum.
+      </p>
+  </div>
 </div>
