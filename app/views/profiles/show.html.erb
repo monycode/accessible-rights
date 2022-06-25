@@ -3,7 +3,7 @@
   <div class="d-flex justify-content-center pt-4">
     <%= image_tag('user_icon.png',  class: "avatar-profile") %>
   </div>
-  <h2 class="pt-3 pb-3 d-flex justify-content-center">User Name</h2>
+  <h2 class="pt-3 pb-3 d-flex justify-content-center"><%= @user.name %></h2>
   <div class="d-flex justify-content-center">
     <%= link_to termination_path do %>
       <button class="yellow-button pt-3">Message</button>
@@ -30,8 +30,5 @@
     </p>
   </div>
 
-  <div class="pt-3">
-    <h3>POSTS</h3>
 
-  </div>
 </div>
