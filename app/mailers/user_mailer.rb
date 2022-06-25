@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #
   def new_answer
     @answer = params[:answer]
-    mail(to: @answer.question.user.email, subject: 'Your Question has been answered')
+    mail(to: "avelargonzalez@gmail.com", subject: 'Your Question has been answered')
     # This will render a view in `app/views/user_mailer`!
   end
 end
