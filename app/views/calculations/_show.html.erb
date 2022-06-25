@@ -1,7 +1,32 @@
-<ul>
-  <li>Vacations compensation $<%=calculation.vacations_compensation.round(2) %></li>
-  <li>Christmas bonus $<%=calculation.christmas_bonus_compensation.round(2) %></li>
-  <li>Unpaid working days $<%=calculation.unpaid_working_days.round(2) %></li>
-  <li>Compensation $<%=calculation.cause_of_termination_compensation.round(2) %></li>
-  <li>Total $<%=calculation.total_compensation.round(2) %></li>
-</ul>
+
+  <ul class = "list-group mb-3">
+    <li class = "list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <h6 class="my-0">Vacations compensation</h6>
+      </div>
+      <span class="text-muted">$<%=calculation.vacations_compensation.round(2) %></span>
+    </li>
+    <li class = "list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <h6 class="my-0">Christmas bonus</h6>
+      </div>
+      <span class="text-muted">$<%=calculation.christmas_bonus_compensation.round(2) %></li></span>
+    <li class = "list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <h6 class="my-0">Unpaid working days</h6>
+      </div>
+      <span class="text-muted">$<%=calculation.unpaid_working_days.round(2) %></span>
+    </li>
+    <li class = "list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <h6 class="my-0">Compensation</h6>
+      </div>
+      <span class="text-muted">$<%=calculation.cause_of_termination_compensation.round(2) %></span>
+    </li>
+    <li class = "list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <h6 class="my-0">Total</h6>
+      </div>
+      <span class="text-muted">$<%=calculation.total_compensation.round(2) %></span>
+    </li>
+  </ul>
