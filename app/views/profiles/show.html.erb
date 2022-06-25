@@ -1,0 +1,34 @@
+<div class="container center-content">
+
+  <div class="d-flex justify-content-center pt-4">
+    <%= image_tag('user_icon.png',  class: "avatar-profile") %>
+  </div>
+  <h2 class="pt-3 pb-3 d-flex justify-content-center"><%= @user.name %></h2>
+  <div class="d-flex justify-content-center">
+    <%= link_to termination_path do %>
+      <button class="yellow-button pt-3">Message</button>
+    <% end %>
+  </div>
+
+  <div class="pt-3 d-flex justify-content-center">
+    <%= image_tag('profile/Linkedin.png',  class: "icon-profile pr-2") %>
+    <%= image_tag('profile/Twitter.png',  class: "icon-profile pl-2") %>
+  </div>
+
+  <ul class="d-flex justify-content-center pt-3">
+    <p>Law Firm: Le Wagon Law </p>
+    <p> Education: Le Wagon Law </p>
+    <p> Location: Mexico City</p>
+  </ul>
+
+  <div class="gradient-bg px-4 py-4">
+    <h4 class="text-white">About:</h4>
+    <p class= "text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras lobortis sapien eu nisi eleifend convallis.
+    Donec quis convallis urna. Integer in imperdiet mi, nec blandit diam. Suspendisse vitae semper diam. .
+    Phasellus nec lorem dui. Nullam aliquam auctor augue a rutrum.
+    </p>
+  </div>
+
+
+</div>
