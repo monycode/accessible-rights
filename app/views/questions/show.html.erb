@@ -29,7 +29,7 @@
     <div class="p-3 border bg-white mb-3" data-controller="show-more">
       <p class="content-text"><%= cl_image_tag answer.user.photo.key, height: 51, width: 55%>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= answer.user.name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <%= answer.created_at %></p>
+          answered <%= time_ago_in_words(answer.created_at) %> ago</p>
       <p data-show-more-target="truncated"><%= answer.content.truncate(content_limit) %></p>
       <p class= "d-none" data-show-more-target="full"><%= answer.content %></p>
       <%= link_to "Read more", "#", "data-action": 'click->show-more#showContent' if answer.content.length > content_limit%>
