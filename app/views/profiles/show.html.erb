@@ -1,7 +1,7 @@
 <div class="container center-content">
 
   <div class="d-flex justify-content-center pt-4">
-    <%= cl_image_tag @user.photo.key, height: 180, width: 180, crop: :fill,  class: "rounded-circle"%>
+    <%= cl_image_tag @user.photo.key, height: 180, width: 180, crop: :fill,  class: "rounded-circle" if @user.photo.key %>
   </div>
   <h2 class="pt-3 pb-3 d-flex justify-content-center"><%= @user.name %></h2>
   <div class="d-flex justify-content-center">
