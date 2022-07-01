@@ -21,8 +21,6 @@
   margin: 0 10%;
 }
 
-
-
 .calculator-subtitle {
   color: #505FB3;
   text-align: center;
@@ -35,8 +33,12 @@
 .calculator-section-break-line {
   border-top: 2px solid #000000;
   width: 80%;
-  align: center;
+  text-align: center;
   margin-left: 10%;
+}
+
+.calculator-explanation-container div {
+  text-align: -webkit-center;
 }
 
 .calculator-explanation-container h1 {
@@ -46,8 +48,13 @@
   font-weight: bold;
   text-align: center;
   font-family: 'Inter';
-
 }
+
+.line-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
 
 
 // .add-a-new-question-section-container {

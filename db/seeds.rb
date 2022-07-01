@@ -118,7 +118,7 @@ question_3 = Question.create!(
 )
 
 answer_3 = Answer.create!(
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
+  content: "If you were fired without any valid reason you could demmand for either your reinstallment or a compensation equal to three months of salary. ",
   user: lawyers[2],
   question: question_3
 )
@@ -188,7 +188,7 @@ question_8 = Question.create!(
   )
 
 answer_8 = Answer.create!(
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit posuere aliquam. Fusce nec elit nunc. Suspendisse potenti. Proin eget fringilla odio. Nullam a magna lectus. Mauris luctus tempus metus, a tristique nisi hendrerit quis. Ut blandit felis a ligula dignissim tincidunt in sed turpis. ",
+  content: "That is not legal, you can leave your work whenever you want and you have no legal obligation to serve a two weeks notice. ",
   user: lawyers[3],
   question: question_8
   )
