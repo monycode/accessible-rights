@@ -8,11 +8,10 @@
 
           <%= f.input :photo,
                       hint: "upload a new photo",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "upload-a-new-photo" } %>
 
-
-          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :email, required: false, autofocus: true %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -32,49 +31,49 @@
 
           <%= f.input :current_password,
                       hint: "we need your current password to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "current-password" } %>
 
 
           <%= f.input :job_title,
                       hint: "we need your current job title to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "current-job-title" } %>
 
 
           <%= f.input :location,
                       hint: "we need your current location to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "current-location" } %>
 
 
           <%= f.input :education,
                       hint: "we need your education to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "education" } %>
 
 
           <%= f.input :law_firm,
                       hint: "we need your current law firm to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "current-law-firm" } %>
 
 
           <%= f.input :bio,
                       hint: "we need your bio to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "your-bio" } %>
 
 
           <%= f.input :twitter_handle,
                       hint: "we need your twitter-handel to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "twitter-handel" } %>
 
 
           <%= f.input :linkedin_url,
                       hint: "we need your linkedin to confirm your changes",
-                      required: true,
+                      required: false,
                       input_html: { autocomplete: "linkedin" } %>
 
 
