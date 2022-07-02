@@ -1,19 +1,19 @@
-<div class="container center-content">
+<div class="container center-content card" style="width: 65rem;">
 
-  <div class="d-flex justify-content-center pt-4">
+  <div class="d-flex justify-content-center pt-5">
     <%= cl_image_tag @user.photo.key, height: 180, width: 180, crop: :fill,  class: "rounded-circle" if @user.photo.key %>
   </div>
-  <h2 class="pt-3 pb-3 d-flex justify-content-center"><%= @user.name %></h2>
+  <h2 class="pt-4 pb-4 d-flex justify-content-center"><%= @user.name %></h2>
   <div class="d-flex justify-content-center">
     <%= link_to "mailto:#{@user.email}" do %>
-      <button class="yellow-button pt-3">Message</button>
+      <button class="yellow-button py-4">Message</button>
     <% end %>
   </div>
 
   <div>
     <div class="pt-3 d-flex justify-content-center">
       <%= link_to "#{@user.linkedin_url}" do %>
-        <%= image_tag('profile/Linkedin.png',  class: "icon-profile pr-2 rounded-circle")  %>
+        <%= image_tag('profile/Linkedin.png',  class: "icon-profile")  %>
       <% end %>
       <p style = "width: 100px;"> </p>
       <%= link_to "https://twitter.com/#{@user.twitter_handle}" do %>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <ul class="d-flex justify-content-around pt-3">
+  <ul class="d-flex justify-content-around fw-bold pt-3">
     <%= "Law Firm: #{@user.law_firm}"%>
     <p>|</p>
     <%= "Education: #{@user.education}"%>
@@ -30,8 +30,8 @@
     <%= "Location: #{@user.location}"%>
   </ul>
 
-  <div class="gradient-bg px-4 py-4 rounded-3">
-    <h4 class="text-white pl-2">About:</h4>
+  <div class="gradient-bg px-4 py-4 rounded-1">
+    <h4 class="text-white fw-bold pl-2">About:</h4>
     <p class= "text-white">Bilingual executive lawyer
     focused on creating strategies and projects in business development,
     foreign trade, economic promotion and participation in trade missions with
@@ -41,7 +41,7 @@
   </div>
 
   <div class="forum-questions ">
-    <h1>Posts</h1>
+    <h1 class="fw-bold">Posts</h1>
       <% @user.answers.each do |answer| %>
         <div class="card border-secondary shadow p-3 mb-5 bg-body rounded">
           <div id="question-<%= answer.id %>">
