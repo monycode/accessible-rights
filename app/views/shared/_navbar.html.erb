@@ -18,7 +18,7 @@
         </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "user_icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag @user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false if @user.photo.key%>
             <div class="dropdown-menu dropdown-menu-end fw-light text-center fs-6" aria-labelledby="navbarDropdown">
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               <%= link_to "Profile", profile_path(current_user), class: "dropdown-item" %>
