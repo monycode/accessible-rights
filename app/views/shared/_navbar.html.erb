@@ -21,7 +21,7 @@
             <%= image_tag "user_icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end fw-light text-center fs-6" aria-labelledby="navbarDropdown">
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              <p>Profile</p>
+              <%= link_to "Profile", profile_path(current_user), class: "dropdown-item" %>
               <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item"%>
             </div>
           </li>
