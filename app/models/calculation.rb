@@ -61,7 +61,7 @@ class Calculation
   end
 
   def cause_of_termination_compensation
-    if @cause_of_termination == "unjustified lay off"
+    if @cause_of_termination == "Unjustified dismissal"
       @monthly_salary * 3
     else
       0
