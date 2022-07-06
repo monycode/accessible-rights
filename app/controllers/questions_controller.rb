@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
     @question.save
 
     if @question.save!
-      redirect_to forum_path(@forum)
+      redirect_to forum_path(@forum.name)
     else
       render "forums/show"
     end
