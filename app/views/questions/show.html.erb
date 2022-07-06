@@ -27,8 +27,10 @@
   <% @question.answers.each do |answer| %>
     <% content_limit = 50 %>
     <div class="p-3 border bg-white mb-3" data-controller="show-more">
-      <%= link_to profile_path(answer.user) do %>
-        <p class="content-text"><%= cl_image_tag answer.user.photo.key, height: 51, width: 55%>
+      <% if answer.user.photo.key %>
+        <%= link_to profile_path(answer.user) do %>
+          <p class="content-text"><%= cl_image_tag answer.user.photo.key, height: 51, width: 55%>
+        <% end %>
       <% end %>
         <%= link_to answer.user.name, profile_path(answer.user), class: "username-text" %>
           answered <%= time_ago_in_words(answer.created_at) %> ago</p>
