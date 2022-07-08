@@ -6,8 +6,8 @@ class AnswersController < ApplicationController
     @answer.question = @question
     @answer.user = current_user
     if @answer.save
-      mail = UserMailer.with(answer: @answer).new_answer
-      mail.deliver_now
+      # mail = UserMailer.with(answer: @answer).new_answer
+      # mail.deliver_now
       redirect_to question_path(@question)
     else
       render "questions/show"
