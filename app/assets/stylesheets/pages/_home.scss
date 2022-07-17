@@ -1,14 +1,14 @@
 // Specific CSS for your home-page
 .home-banner {
   height: 1000px;
-  background: linear-gradient(hsla(300%, 80%, 20%, 0.0),60%, #04198D),
-              url(home-banner-one.png) no-repeat center center / cover;
+  background: linear-gradient(hsla(300%, 80%, 20%, 0.0),60%, rgb(40,48,96)),
+              url(bannerpic.png) no-repeat center center / cover;
   display: grid;
   place-items: center;
 }
 
 .gradient-bg {
-  background: linear-gradient(#04198D,70%, #283060),
+  background: linear-gradient(#283060,60%, #04198D),
 }
 
 .center-grid {
@@ -21,16 +21,14 @@
   width: 425px;
 }
 .main-title {
-  font-size: 125px;
+  font-size: 80px;
   color: #FFFFFF;
   font-weight: bold;
-  padding-top: 100px;
 }
 .blue-title {
-  font-size: 50px;
-  color:#04198D;
+  font-size: 40px;
+  color: #283060;
   font-weight: bold;
-  padding-top:50px;
 }
 .titles-white{
   font-size: 40px;
@@ -38,16 +36,10 @@
   font-weight: bold;
   padding-top: 20px;
 }
-.second-title{
-  font-size: 60px;
-  color: #FFFFFF;
-  font-weight:lighter;
-
-}
 .cards-white{
-  font-size: 28px;
+  font-size: 20px;
   color: #FFFFFF;
-  font-weight: light;
+  font-weight: bold;
   padding-top: 20px;
   padding: 30px;
 }
@@ -55,27 +47,23 @@
 .yellow-button {
   background-color: #FEF054;
   border: none;
-  color: #04198D;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 20px;
-  padding-left: 10px;
+  color: rgb(23, 16, 16);
+  padding: 10px 60px;
+  text-align: center;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 15px;
   font-weight: bold;
-  width: 200px;
 }
 
 .icon-home {
   width: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .icon-topic {
   width: 120px;
-  padding-bottom: 30px;
-  padding-left: 55px;
+  padding-bottom: 10px;
 }
 
 .image-hands {
@@ -89,21 +77,21 @@
 
 .banner-text {
   place-content: center;
-  padding-top:90px;
-  padding-bottom: 40px;
 }
 
 .categories-container {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 75px;
 
 }
 
-.sections-container {
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
+// .category-card {
+
+// }
+
+// .card-image {
+
+// }
 
 .card-topics {
   background-color: #2F8F9D;
@@ -113,49 +101,17 @@
 }
 
 .home-text-grey {
-  font-size: 30px;
+  font-size: 20px;
   color: #888888;
-  font-weight: 300;
-  padding-top: 40px;
+  font-weight: 500;
+  padding-top: 20px;
   text-align: center;
-  padding-bottom: 50px;
-  margin-bottom: 40px;
 }
 .text-blue{
-  font-size: 30px;
-  color: #04198D;
+  font-size: 20px;
+  color: #283060;
   font-weight: bold;
   padding-top: 20px;
   padding: 30px;
-  text-align:left;
-}
-.blue-title-two {
-  font-size: 40px;
-  color: #04198D;
-  font-weight: bold;
-  padding-top: 10px;
-  margin-top:30px;
-
-
   text-align: center;
-}
-.blue-title-one{
-  font-size: 40px;
-  color: #04198D;
-  font-weight: bold;
-  padding-top: 75px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  text-align: center;
-}
-.footer-title{
-  color:#FFFFFF;
-  font-size:50px;
-  font-weight: bold;
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
-.footer{
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
