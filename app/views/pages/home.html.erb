@@ -1,26 +1,26 @@
 <div class="home-banner">
   <div class="banner-text">
-    <h1 class="main-title pt-5">ACCESSIBLE RIGHTS</h1>
+    <h1 class="main-title ">ACCESSIBLE RIGHTS</h1>
     <div class="line"></div>
     <h3 class="titles-white">Know your rights</h3>
   </div>
 
 
   <div>
-    <h3 class="titles-white">"simplifying access to labour laws"</h3>
+    <h3 class="second-title">"simplifying access to labour laws"</h3>
   </div>
 
   <div class="categories-container">
     <div class="center-grid">
-      <h4 class="cards-white">Know the rights that matter  </h4>
+      <h4 class="cards-white">Rights that matter  </h4>
       <%= image_tag('Home/balance.png',  class: "icon-home") %>
-      <a href = "#topics" class="yellow-button">Read</a>
+      <a href = "#topics" class="yellow-button text-center">Read</a>
     </div>
     <div> </div>
     <div class="center-grid ">
       <h4 class="cards-white">  Know Your Numbers</h4>
       <%= image_tag('Home/balance-sheet.png', class: "icon-home") %>
-      <a href = "calculations/new" class="yellow-button">Calculator</a>
+      <a href = "calculations/new" class="yellow-button text-center">Calculator</a>
     </div>
   </div>
 </div>
@@ -28,7 +28,7 @@
   <div class="container">
     <div>
       <div class = "pt-3">
-        <h2 class="center-grid pt-5 blue-title">You can trust us</h2>
+        <h2 class="pt-5 blue-title-one">Knowing your legal rights shouldn't be expensive</h2>
         <p class="home-text-grey center">We have successfully assisted over 1000 workers in finding the right
         information to empower them to fight for their labour laws</p>
 
@@ -37,53 +37,46 @@
           <div class="line"></div>
           <div> </div>
         </div>
-
-        <h4 class="text-blue pb-5 pt-5">Knowing your legal rights shouldn't be expensive</h4>
       </div>
 
       <div class="row pt-5 pb-5">
-        <div class="col-8">
-          <h2 class="blue-title center-grid">You are not alone</h2>
+        <div>
+          <h2 class="blue-title-two ">You are not alone</h2>
           <p class="home-text-grey">Together we are stronger, we make up the largest
           law and rights online community. Every single one
           of us are willing to help you.</p>
-        </div>
-        <div class="col-4 pb-5">
-          <%= image_tag('Home/hands.png', class: "image-hands") %>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="gradient-bg pt-3 pb-5" id="topics">
+  <div class="footer gradient-bg pt-5 pb-5" id="topics">
     <div class="container pb-5">
-      <div class="titles-white center-grid pb-3">Choose a topic:</div>
-      <div class="row pt-3">
-        <div class="col-6 center-grid">
+      <div class="footer-title titles-white center-grid">Choose a topic:</div>
+
+      <div class="sections-container justify-content-evenly">
+        <div class="individual-section-container">
           <%= image_tag('Home/contract.png', class: "icon-topic") %>
           <%= link_to termination_path do %>
             <button class="yellow-button">Terminated</button>
           <% end %>
         </div>
 
-        <div class="col-6 center-grid">
+        <div class="individual-section-container">
           <%= image_tag('Home/resign.png', class: "icon-topic") %>
           <%= link_to resignation_path do %>
             <button class="yellow-button">Resigning</button>
           <% end %>
         </div>
-      </div>
 
-
-      <div class="row pt-5">
-        <div class="col-6 center-grid">
+        <div class="individual-section-container">
           <%= image_tag('Home/pouch.png', class: "icon-topic") %>
           <%= link_to unpaid_bonus_path do %>
             <button class="yellow-button">Unpaid Bonus</button>
           <% end %>
         </div>
 
-        <div class="col-6 center-grid">
+        <div class="individual-section-container">
           <%= image_tag('Home/price.png', class: "icon-topic") %>
           <%= link_to unpaid_hours_path do %>
             <button class="yellow-button">Unpaid Hours</button>
